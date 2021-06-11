@@ -17,6 +17,4 @@ async def on_message(message):
 
     print('Message from {0.author}: {0.content}'.format(message))
 
-
-
 client.run('ODUyMjg3OTU4MDA2NzU5NDU0.YMEpAw.ubIT1qL5RGPFhf1PpDGd8bsBp6k')
