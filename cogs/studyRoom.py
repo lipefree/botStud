@@ -33,6 +33,12 @@ class StudyRoomCog(commands.Cog):
         print(message)
         await ctx.send(message)
 
+    @commands.command(name='test')
+    async def test(self, ctx):
+        message = f"[{datetime.datetime.now()}] test by {ctx.author.name}"
+        print(message)
+        await ctx.send(message)
+
     @commands.command(name='play')
     async def play(self, ctx, url : str):
 
@@ -41,7 +47,7 @@ class StudyRoomCog(commands.Cog):
         name = ctx.author._get_channel
 
         #how to select channel
-        voiceChannel = discord.utils.get(ctx.guild.voice_channels, name = 'Salon') #Pour l'instant se connecte a "Salon"
+        voiceChannel = discord.utils.get(ctx.guild.voice_channels, name = 'General') #Pour l'instant se connecte a "Salon"
 
         await voiceChannel.connect() #Bot join channel
 

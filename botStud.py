@@ -28,7 +28,7 @@ async def on_ready():
 
 @tasks.loop(seconds = 10)
 async def checkIfAlone():
-    if len(client.voice_clients) is not 0 :
+    if len(client.voice_clients) != 0 :
         if len(client.voice_clients[0].channel.members) == 1 :
             await client.voice_clients[0].disconnect()
 
