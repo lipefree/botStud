@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import discord
 from discord.ext import commands, tasks
 import youtube_dl
@@ -29,7 +31,7 @@ async def checkIfAlone():
         if len(client.voice_clients[0].channel.members) == 1 :
             await client.voice_clients[0].disconnect()
 
-
 print("working")
 
-client.run('ODUyMjg3OTU4MDA2NzU5NDU0.YMEpAw.PbpJJTb8BElFk6Qaj9PkY1H1O-4')
+client.run('OTA5ODc1NDgyNzY0Mzk4NjYz.YZKpkw.ARwov12hlfUMST047gT21KIh3bw')
+

@@ -26,6 +26,11 @@ class StudyRoomCog(commands.Cog):
                     voice.play(discord.FFmpegOpusAudio(executable="H:/ffmpeg-N-102723-g94af6414ab-win64-gpl-shared/bin/ffmpeg", source="song.webm"))
 
 
+    @commands.command(name='ping')
+    async def ping(self, ctx):
+        message = f"[{datetime.now}] ping by {ctx.author.name}"
+        print(message)
+        await ctx.send(message)
 
     @commands.command(name='play')
     async def play(self, ctx, url : str):
@@ -58,7 +63,7 @@ class StudyRoomCog(commands.Cog):
         if voice.is_playing():
             voice.pause()
         else:
-            await ctx("No audio is playing, can't pause")
+            await ctx.send("No audio is playing, can't pause")
 
     @commands.command()
     async def resume(self, ctx):
