@@ -2,6 +2,7 @@ import discord
 from discord.ext import commands
 import os
 import youtube_dl
+import datetime
 
 class StudyRoomCog(commands.Cog):
     def __init__(self, client):
@@ -28,7 +29,7 @@ class StudyRoomCog(commands.Cog):
 
     @commands.command(name='ping')
     async def ping(self, ctx):
-        message = f"[{datetime.now}] ping by {ctx.author.name}"
+        message = f"[{datetime.datetime.now()}] ping by {ctx.author.name}"
         print(message)
         await ctx.send(message)
 
