@@ -5,6 +5,7 @@ from discord.ext import commands, tasks
 import youtube_dl
 import os
 import asyncio
+import token
 
 intents = discord.Intents().default()
 intents.voice_states = True
@@ -33,5 +34,5 @@ async def checkIfAlone():
 
 print("working")
 
-client.run('OTA5ODc1NDgyNzY0Mzk4NjYz.YZKpkw.ARwov12hlfUMST047gT21KIh3bw')
+client.run(token.TOKEN)
 
