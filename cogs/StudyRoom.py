@@ -122,14 +122,3 @@ class Music(commands.Cog):
                 raise commands.CommandError("Author not connected to a voice channel.")
         elif ctx.voice_client.is_playing():
             ctx.voice_client.stop()
-
-bot = commands.Bot(command_prefix=commands.when_mentioned_or("!"),
-                   description='Relatively simple music bot example')
-
-@bot.event
-async def on_ready():
-    print('Logged in as {0} ({0.id})'.format(bot.user))
-    print('------')
-
-bot.add_cog(Music(bot))
-bot.run('OTEyNDQyMDU2MzkwMDkwNzYy.YZv_4g.SpCyqgVBxLo_QZ6ckedFffrfhrc')
